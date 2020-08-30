@@ -16,7 +16,7 @@ namespace RemoteControlApp.Data
         {
             try
             {
-                return SendPost(new Dictionary<string, string>
+                return SendGetRequest(new Dictionary<string, string>
                 {
                     {"spotify","spotify" }
                 });
@@ -32,7 +32,7 @@ namespace RemoteControlApp.Data
         {
             try
             {
-                return SendPost(new Dictionary<string, string>
+                return SendGetRequest(new Dictionary<string, string>
                 {
                     {"turnOff","turnOff" }
                 });
@@ -50,7 +50,7 @@ namespace RemoteControlApp.Data
         {
             try
             {
-                return SendPost(new Dictionary<string, string>
+                return SendGetRequest(new Dictionary<string, string>
                 {
                     {"switchSleepMode","switchSleepMode" }
                 });
@@ -68,7 +68,7 @@ namespace RemoteControlApp.Data
         {
             try
             {
-                return SendPost(new Dictionary<string, string>
+                return SendGetRequest(new Dictionary<string, string>
                 {
                     {"status","status" }
                 });
@@ -83,7 +83,7 @@ namespace RemoteControlApp.Data
 
 
 
-        public bool SendPost (Dictionary<string, string> parameters)
+        public bool SendGetRequest (Dictionary<string, string> parameters)
         {
 
             try
@@ -109,7 +109,7 @@ namespace RemoteControlApp.Data
         {
             try
             {
-                return SendPost(new Dictionary<string, string>
+                return SendGetRequest(new Dictionary<string, string>
                 {
                     {"soundMuteUnmute","soundMuteUnmute" }
                 });
@@ -125,7 +125,7 @@ namespace RemoteControlApp.Data
         {
             try
             {
-                return SendPost(new Dictionary<string, string>
+                return SendGetRequest(new Dictionary<string, string>
                 {
                     {"volumeUp","volumeUp" }
                 });
@@ -141,7 +141,7 @@ namespace RemoteControlApp.Data
         {
             try
             {
-                return SendPost(new Dictionary<string, string>
+                return SendGetRequest(new Dictionary<string, string>
                 {
                     {"volumeDown","volumeDown" }
                 });
