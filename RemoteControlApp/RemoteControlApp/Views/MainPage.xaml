@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RemoteControlApp.MainPage">
+
+        <ScrollView>
+            <StackLayout>
+
+                <StackLayout>
+                    <Frame BackgroundColor="#1DB954" Padding="24" Margin="10" CornerRadius="10">
+                        <Button Clicked="btnSpotify_Clicked" CornerRadius="10" Text="Spotify Aç"></Button>
+                    </Frame>
+
+                    <Frame BackgroundColor="DarkRed" Padding="10" Margin="10" CornerRadius="10">
+                        <StackLayout>
+                            <Label TextColor="WhiteSmoke" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" Text="Bilgisayar İşlemleri"></Label>
+                            <Grid>
+                                <Button Grid.Row="0" Grid.Column="0" BackgroundColor="IndianRed" Clicked="btnTurnOff_Clicked" CornerRadius="10" Text="Kapat"></Button>
+                                <Button Grid.Row="0" Grid.Column="1" BackgroundColor="Yellow" Clicked="btnTurnSleep_Clicked" CornerRadius="10" Text="Uyku Modu"></Button>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+
+
+                    <Frame BackgroundColor="LightGray" Padding="10" Margin="10" CornerRadius="10">
+                        <StackLayout>
+                            <Label TextColor="Black" FontSize="16" HorizontalOptions="Center" VerticalOptions="Center" Text="Ses İşlemleri"></Label>
+                            <Grid>
+                                <Button x:Name="btnVolumeDown" Grid.Row="0" Grid.Column="0" BackgroundColor="IndianRed"   FontSize="16" Clicked="btnVolumeDown_Clicked" CornerRadius="10" Text="-"></Button>
+                                <Button Grid.Row="0" Grid.Column="1" BackgroundColor="DarkGray"   Clicked="btnMuteUnmute_Clicked" CornerRadius="10" Text="Sustur/Aç"></Button>
+                                <Button  x:Name="btnVolumeUp" Grid.Row="0" Grid.Column="2" BackgroundColor="LightGreen" FontSize="16"  Clicked="btnVolumeUp_Clicked" CornerRadius="10" Text="+"></Button>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+                <StackLayout VerticalOptions="EndAndExpand">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Grid.Row="0">
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="1" VerticalOptions="End">
+                            <Frame x:Name="frameServerStatus" BackgroundColor="#1DB954" Padding="5" Margin="10" CornerRadius="10">
+                                <Grid>
+                                    <Label x:Name="lblServerStatus" Grid.Column="0" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Server Durumu: AKTİF"></Label>
+                                    <Button x:Name="btnServerStatus" Clicked="btnServerStatus_Clicked" Grid.Column="1" Text="Tekrar Dene"></Button>
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+                    </Grid>
+
+                </StackLayout>
+            </StackLayout>
+    </ScrollView>
+
+
+   
+
+</ContentPage>
